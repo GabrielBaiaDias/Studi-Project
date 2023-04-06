@@ -1,0 +1,481 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,300&family=Dosis:wght@300&display=swap');
+
+:root {
+    --Font_Dosis-Nome_item: 'Dosis', arial, verdana, sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+
+    overflow: hidden;
+}
+
+#form-edit_add>#esquerdo {
+    width: 50%;
+    height: 65%;
+    float: left;
+    margin-left: 5px;
+    /* background-color: red; */
+}
+
+#form-edit_add>#direito {
+    width: 50%;
+    height: 65%;
+    float: right;
+    width: 45%;
+    /* background-color: blue; */
+}
+
+header>#fundo {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: none;
+    visibility: hidden;
+
+    position: absolute;
+    display: block;
+    backdrop-filter: blur(2px);
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+
+}
+
+header>#logo-site {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+header>#fundo>#form-edit_add {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: block;
+    background-color: #2e2e3e;
+    color: gray;
+    width: 680px;
+    height: 420px;
+    /* color: rgb(96, 95, 95); */
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-left: 8px solid #2c80a4;
+
+    font-family: monospace;
+    font-weight: bold;
+
+
+}
+
+#form-edit_add>label {
+    color: #5bb9e1;
+}
+
+.inputs_form-edit_add {
+
+    display: block;
+    width: 90%;
+    height: auto;
+
+    background-color: rgb(230, 230, 230);
+    margin: 10px;
+    font-size: 1.8em;
+    border: none;
+    border-left: 3.5px solid #3691ce;
+    border-right: 1px solid rgb(200, 200, 200);
+    color: gray;
+    font-weight: bold;
+    padding: 3px;
+    font-family: monospace;
+    outline: none;
+}
+
+#form-edit_add>#btns {
+
+    display: block;
+    width: 100%;
+    height: auto;
+    /* background-color: green; */
+}
+
+.btns_form-edit_add {
+
+    outline: none;
+    border: none;
+
+    position: relative;
+    bottom: 0;
+    left: 0;
+
+    display: inline;
+    padding: 1px;
+    margin: 5px;
+    margin-top: 17px;
+    border-left: 3.5px solid #3691ce;
+    /* border-right: 3.5px solid gray; */
+    background-color: rgb(230, 230, 230);
+    color: gray;
+    font-size: 1.8em;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+#Favoritar {
+
+    display: inline-block;
+    transform: translate(12px, 7px);
+    height: 35px;
+
+}
+
+#btnConcluir,
+#btnCancelar {
+
+    padding: 4px;
+    margin: 5px;
+
+    transform: translateX(330px);
+}
+
+#btnConcluir:hover {
+
+    transition: .3s;
+    background-color: rgb(198, 198, 198);
+}
+
+#btnCancelar:hover {
+
+    transition: .3s;
+    background-color: rgb(198, 198, 198);
+}
+
+#Favoritar:hover {
+
+    transition: .3s;
+    background-color: rgb(198, 198, 198);
+}
+
+#form-edit_add>#Titulo {
+
+    display: block;
+    font-size: 35px;
+    margin: 10px;
+    margin-bottom: 15px;
+    color: #3691ce;
+    text-align: center;
+}
+
+#form-edit_add>#txtMateria {
+
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+#form-edit_add>#txtEntrega {
+
+    display: block;
+    width: 35%;
+    float: right;
+}
+
+::-webkit-input-placeholder {
+    color: gray;
+}
+
+.icon {
+    font-size: .8em;
+}
+
+#iconT {
+
+    font-size: .9em;
+    transform: translateY(3px);
+}
+
+#iconTC {
+    font-size: .9em;
+    transform: translateY(3px);
+    padding-right: 2px;
+}
+
+#plus {
+    font-weight: bolder;
+}
+
+/* Header */
+
+header {
+
+    width: 100%;
+    height: 75px;
+    background-color: #23232d;
+}
+
+header>#Logo {
+
+    display: block;
+    /* float: left; */
+    padding: 10px;
+}
+
+#logo-site-escrita {
+
+    margin-bottom: 4px;
+}
+
+div#Titulo {
+
+    display: block;
+
+    position: relative;
+    top: 10%;
+    text-align: center;
+
+}
+
+div#Titulo>span {
+
+    font-size: 2.5em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+}
+
+div#Opcoes {
+
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: auto;
+
+    background-image: linear-gradient(to bottom, #23232d, #4d4d67);
+}
+
+#menu_icon {
+
+    padding: 3px;
+    font-weight: bolder;
+
+}
+
+input#menuCheck [type="checkbox"] {
+
+    display: none;
+}
+
+input#menuCheck [type="checkbox"]:checked ~ nav#menu {
+
+
+}
+
+.btnOpc {
+
+    transition: .3s;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    float: right;
+    font-size: 1.2em;
+    margin-right: 10px;
+    height: 35px;
+    padding: 6px;
+    border: none;
+    font-family: monospace;
+    background-color: #1a85b3;
+    color: white;
+
+    border-radius: 2px;
+}
+
+/* Body */
+
+body {
+    background-color: #cdcdcd;
+    /* justify-content: space-between; */
+    width: auto;
+    height: 100vh;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+div#BackPanels {
+
+    display: inline-block;
+    width: auto;
+    height: 95%;
+    margin-top: 13px;
+    margin-left: auto;
+}
+
+.Panels {
+
+    display: inline-block;
+    height: 100%;
+    margin: 12px;
+    margin-top: 10px;
+}
+
+.TituloPanels {
+
+    padding: 8px;
+    width: 95%;
+    text-align: left;
+
+}
+
+.TituloPanels>.btnAdd_Area {
+
+    float: right;
+
+    outline: none;
+    border: none;
+    width: auto;
+    height: 24px;
+    box-shadow: 2px 2px 1px #ababab;
+}
+
+.TituloPanels>.btnAdd_Area:hover {
+
+    box-shadow: 1.5px 1.5px 1px #ababab;
+    transform: translate(.5px, .5px);
+}
+
+.Panels>.TituloPanels>span {
+
+    display: inline-block;
+    position: relative;
+    top: 40%;
+
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-family: 'Asap', verdana, arial, sans-serif;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: rgb(100, 100, 100);
+}
+
+.Area {
+
+    display: block;
+    padding: 8px 13px;
+    width: 280px;
+    height: 490px;
+    background-color: #efefef;
+    border-radius: 5px;
+    overflow-y: auto;
+}
+
+.numQuantia  {
+
+    padding: 5px; 
+    font-size: 1.2em;
+    font-family: var(--Font_Dosis-Nome_item); 
+    float: right;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 10px;
+}
+
+/* Item */
+
+.Item {
+
+    padding: 3px;
+    display: block;
+    width: 100%;
+    height: auto;
+    /* font-family: var(--Font_Dosis-Nome_item); */
+    box-sizing: border-box;
+    margin: 2% 0px;
+    border-radius: 5px;
+    background-image: linear-gradient(to left, #3895bd 28%, #c9c9c9 28%);
+}
+
+.branco>.nomeItem {
+
+    display: inline-block;
+    width: 50%;
+    font-family: var(--Font_Dosis-Nome_item);
+    font-size: 1.1em;
+    padding: 5px;
+    color: black;
+    font-weight: 00;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+
+.Item>.azul {
+
+    display: inline-block;
+    width: 20%;
+
+}
+
+.btn_x-circle {
+    background-color: transparent;
+    border: 0;
+}
+
+.Item>.branco {
+
+    display: inline-block;
+    width: 72%;
+    height: 100%;
+
+
+}
+
+.azul .iconConfig {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.azul .Completar {
+    margin-left: 45px;
+}
+
+.azul #completarX {
+    display: none;
+}
+
+.branco .btnCheckC {
+
+    display: none;
+    color: #3691ce;
+    border: none;
+    background-color: transparent;
+    margin: 2px;
+
+}
+
+.branco .btnCheckV {
+
+    display: block;
+    color: #3691ce;
+    border: none;
+    background-color: transparent;
+    margin: 2px;
+
+}

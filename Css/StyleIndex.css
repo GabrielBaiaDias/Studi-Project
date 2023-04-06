@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+* {
+
+    margin: 0;
+    overflow: hidden;
+}
+
+#imgBack {
+
+    height: 100%;
+    width: 100%;
+}
+
+form {
+
+    display: block;
+    width: 375px;
+    height: 425px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border: 3px solid rgba(255, 255, 255, 0.325);
+    background-color: rgba(255, 255, 255, 0.011);
+    border-radius: 15px;
+    backdrop-filter: blur(2.5px);
+
+    color: rgb(232, 244, 255);
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+form > span {
+
+    
+    color: rgb(232, 244, 255);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4.2em;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+    
+}
+
+form > #main {
+
+    width: auto;
+    height: 314.5px;
+    margin: 30px;
+}
+
+form > #main > .input {
+
+    display: block;
+    width: 300px;
+/* 
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%); */
+
+    margin-bottom: 30px;
+    background-color: aliceblue;
+    padding: 5px;
+    padding-left: 10px;
+    color: rgb(161, 161, 161);
+    outline: none;
+    border-radius: 2px;
+    border: none;
+}
+
+form > #main > #btnEntrar {
+
+    display: block;
+    width: 100%;
+    height: 55px;
+
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.1em;
+
+    color: rgb(232, 244, 255);
+    margin-top: 50px;
+    background-color: rgb(72, 145, 255);
+    border-radius: 5px;
+}
+
+form > #main > #txtSenha {
+    margin-bottom: 20px;
+}
+
+#view_Pass {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+}
+
+#ld_view_Pass {
+    display: inline-block;
+    font-size: .9em;
+    /* margin-bottom: 10px; */
+}
