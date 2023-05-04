@@ -2,27 +2,23 @@
 
 var caminho = "https://formsubmit.co/";
 
-var inputEmail = document.getElementById("txtEmail");
-var inputSenha = document.getElementById("txtSenha");
+var inputEmail = document.querySelector("#txtEmail");
+var inputSenha = document.querySelector("#txtSenha");
 
-var email;
-var senha;
+check.addEventListener('click', MostraSenha);
 
-var check = document.getElementById("view_Pass");
-
-var MostraSenha = () => {
+function MostraSenha() {
     debugger
-
-    if (check.checked == true) {
+    if (inputSenha.type == "password") {
         inputSenha.type = "text";
     } else {
         inputSenha.type = "password";
     }
 }
 
-var ResetaForm = () => {
+function ResetaForm() {
 
-    inputEmail.innerText = "";
-    inputSenha.innerText = "";
+    inputEmail.value = "";
+    inputSenha.value = "";
     check.checked = false;
 }

@@ -1,28 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-r">
 <link rel="stylesheet" href="Css/StyleIndex.css">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Images/Logo-Icone_Studi-Project.ico" type="image/x-icon">
+    <script src="Js/ScryptIndex.js"></script>
     <title>StudiProject</title>
 </head>
-<img id="imgBack" src="Images/pexels-bri-schneiter-346529.jpg" alt="">
 
 <body>
     <form id="form" action="MainPage.html">
-        <span>Login</span>
         <div id="main">
-            E-mail<input type="email" class="input" id="txtEmail" required>
-            Senha<input type="password" class="input" id="txtSenha" required>
-            <input onclick="MostraSenha()" type="checkbox" name="view_Pass" id="view_Pass">
-            <label for="view_Pass" id="ld_view_Pass"> Mostrar Senha</label>
-            <input type="submit" id="btnEntrar" value="Entrar">        
+            <span>Login</span>
+            <label for="txtEmail" id="labelEmail">E-mail</label>
+            <label for="txtEmail"><box-icon class="iconInput" color="#016FA7" name='user'></box-icon></label>
+
+            <input type="email" class="input" id="txtEmail" required>
+            <label for="txtSenha" id="labelSenha">Senha</label>
+            <label for="txtSenha"><box-icon class="iconInput" color="#016FA7" style="transform: translate(-39px, 30px);"
+                    name='key'></box-icon></label>
+
+            <input type="password" class="input" id="txtSenha" required>
+            <input type="checkbox" id="id_view_Pass">
+            <label for="id_view_Pass" id="lb_view_Pass"> Mostrar Senha</label>
+
+            <input type="submit" id="btnEntrar" value="Entrar">
+            <input type="submit" class="btnAdicionais" id="btnCriarConta" value="Criar Conta">
+            <input type="submit" class="btnAdicionais" id="btnEsqueciSenha" value="Esqueci minha senha">
         </div>
+        <div id="imgForm"></div>
     </form>
 </body>
 
 </html>
-<script src="Js/ScryptIndex.js" defer></script>

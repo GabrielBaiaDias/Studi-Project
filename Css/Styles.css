@@ -11,13 +11,16 @@
 * {
     margin: 0;
     padding: 0;
+    user-select: none;
+    overflow: none;
 
     font-family: Arial, Helvetica, sans-serif;
 }
 
-html {
+body {
 
-    overflow: hidden;
+    background-image: url(../Images/Pattern\ balls.png);
+    background-size: cover;
 }
 
 #form-edit_add>#esquerdo {
@@ -48,6 +51,7 @@ header>#fundo {
     position: absolute;
     display: block;
     backdrop-filter: blur(2px);
+    background-color: #4d4d6762;
     width: 100%;
     height: 100%;
     z-index: 9999;
@@ -55,7 +59,7 @@ header>#fundo {
 }
 
 header>#logo-site {
-    display: block;
+    display: inline-block;
     width: 20px;
     height: 20px;
 }
@@ -230,12 +234,13 @@ header {
 header>#Logo {
 
     display: block;
-    /* float: left; */
+    float: center;
     padding: 10px;
 }
 
 #logo-site-escrita {
 
+    display: block;
     margin-bottom: 4px;
 }
 
@@ -245,7 +250,7 @@ div#Titulo {
 
     position: relative;
     top: 10%;
-    text-align: center;
+    text-align: right;
 
 }
 
@@ -259,7 +264,7 @@ div#Titulo>span {
 div#Opcoes {
 
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     width: 100%;
     height: auto;
 
@@ -270,37 +275,56 @@ div#Opcoes {
 
     padding: 3px;
     font-weight: bolder;
+    float: left;
 
 }
 
-input#menuCheck [type="checkbox"] {
-
+input[type="checkbox"] {
     display: none;
 }
 
-input#menuCheck [type="checkbox"]:checked ~ nav#menu {
+input#inputMenuCheck[type="checkbox"]:checked nav#menu {
 
+    transform: translateX(0);
+}
+
+#btnInput {
+
+    background-color: transparent;
+    border: none;
+    z-index: 1;
+}
+
+#menu {
+
+    display: inline-block;
+    position: relative;
+    width: 380px;
+    height: 100%;
+    font-size: 1.1em;
+    background-color: #2e2e3e5f;
+    transform: translateX(-380px);
+}
+
+#menu>ul {
+
+    width: 100%;
+    margin-top: 50px;
+    /* background-color: green; */
 
 }
 
-.btnOpc {
-
-    transition: .3s;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-
-    float: right;
-    font-size: 1.2em;
-    margin-right: 10px;
-    height: 35px;
-    padding: 6px;
-    border: none;
-    font-family: monospace;
-    background-color: #1a85b3;
+#menu>ul>li {
+    padding: 25px;
+    width: auto;
     color: white;
 
-    border-radius: 2px;
+}
+
+#menu>ul>li:hover {
+    padding: 25px;
+    color: black;
+    background-color: #3d9bc3;
 }
 
 /* Body */
@@ -316,17 +340,19 @@ body {
 
 div#BackPanels {
 
-    display: inline-block;
+    display: block;
+    float: right;
     width: auto;
-    height: 95%;
+    height: auto;
+
     margin-top: 13px;
-    margin-left: auto;
+    margin-right: 30px;
 }
 
 .Panels {
 
     display: inline-block;
-    height: 100%;
+    height: auto;
     margin: 12px;
     margin-top: 10px;
 }
@@ -376,17 +402,17 @@ div#BackPanels {
     padding: 8px 13px;
     width: 280px;
     height: 490px;
-    background-color: #efefef;
+    background-color: #d5d5d5;
     border-radius: 5px;
     overflow-y: auto;
 }
 
-.numQuantia  {
+.numQuantia {
 
-    padding: 5px; 
+    padding: 5px;
     font-size: 1.2em;
-    font-family: var(--Font_Dosis-Nome_item); 
-    float: right;
+    font-family: var(--Font_Dosis-Nome_item);
+    float: left;
 }
 
 ::-webkit-scrollbar {
@@ -410,15 +436,15 @@ div#BackPanels {
     box-sizing: border-box;
     margin: 2% 0px;
     border-radius: 5px;
-    background-image: linear-gradient(to left, #3895bd 28%, #c9c9c9 28%);
+    background-image: linear-gradient(to left, #3895bd 28%, #eaeaea 28%);
 }
 
 .branco>.nomeItem {
 
-    display: inline-block;
-    width: 50%;
+    display: block;
+    width: 80%;
     font-family: var(--Font_Dosis-Nome_item);
-    font-size: 1.1em;
+    font-size: 1em;
     padding: 5px;
     color: black;
     font-weight: 00;
@@ -428,8 +454,21 @@ div#BackPanels {
 
 .Item>.azul {
 
-    display: inline-block;
+    /* position: inherit;
+    top: 0;
+    float: end;
+    
+    display: block;
     width: 20%;
+    height: 100%; */
+
+    position: relative  ;
+
+    display: block;
+    width: 25%;
+    /* height: 83px; */
+    height: 100%;
+    float: right;
 
 }
 
@@ -441,19 +480,20 @@ div#BackPanels {
 .Item>.branco {
 
     display: inline-block;
-    width: 72%;
+    width: 71%;
     height: 100%;
-
-
 }
 
 .azul .iconConfig {
-    display: block;
-    margin-bottom: 30px;
+    float: top;
+    transform: translateX(-7px);
 }
 
 .azul .Completar {
-    margin-left: 45px;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    /* transform: translate(55%, -130%); */
 }
 
 .azul #completarX {
@@ -463,19 +503,27 @@ div#BackPanels {
 .branco .btnCheckC {
 
     display: none;
-    color: #3691ce;
-    border: none;
-    background-color: transparent;
-    margin: 2px;
-
 }
 
 .branco .btnCheckV {
+    display: inline-block;
+}
 
-    display: block;
+.branco .btnCheckV,
+.branco .btnCheckC {
+
     color: #3691ce;
     border: none;
     background-color: transparent;
-    margin: 2px;
+}
 
+.materiaItem {
+    float: right;
+    display: inline-block;
+    font-family: var(--Font_Dosis-Nome_item);
+    font-size: .9em;
+    padding: 3px;
+    color: rgb(79, 79, 79);
+    font-weight: 00;
+    word-wrap: break-word;
 }
